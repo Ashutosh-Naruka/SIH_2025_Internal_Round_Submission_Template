@@ -22,6 +22,6 @@ This README provides an overview of the project, including team details, relevan
 - **SIH Presentation:** [Final SIH Presentation](URL TO PPT UPLOADED TO GITHUB)
 - **Video Demonstration:** [Watch Video](https://youtu.be/SfNZNNAENhg)
 - **Live Deployment:** [View Deployment app](https://drive.google.com/file/d/1X5TELfcWHxT1lqo2Pc5CblEfL3-EAxPs/view?usp=sharing)
-- - **Live Deployment:** [View Deployment dashboard](https://fixmycity-dashboard.netlify.app/)
+- **Live Deployment:** [View Deployment dashboard](https://fixmycity-dashboard.netlify.app/)
 - **Source Code:** [GitHub Repository](https://github.com/Ashutosh-Naruka/SIH-FINAL-dual-)
 - **Additional Resources:** [React Native Documentation](https://reactnative.dev/docs/getting-started)
