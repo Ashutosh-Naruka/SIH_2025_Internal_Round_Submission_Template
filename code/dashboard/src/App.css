@@ -1,0 +1,608 @@
+/* Modern Government Dashboard Styling - Jharkhand Theme */
+
+/* CSS Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', 'Noto Sans Devanagari', 'Segoe UI', 'Roboto', sans-serif;
+  background: #f8fafc;
+  color: #1e293b;
+  line-height: 1.6;
+}
+
+/* Hindi Text Support */
+.hindi-text {
+  font-family: 'Noto Sans Devanagari', 'Inter', sans-serif;
+}
+
+/* Ensure proper rendering for mixed Hindi-English content */
+:lang(hi) {
+  font-family: 'Noto Sans Devanagari', 'Inter', sans-serif;
+}
+
+/* Government Color Palette */
+:root {
+  /* Primary Colors - Jharkhand Government Theme */
+  --primary-green: #2c5530;
+  --primary-gold: #DAA520;
+  --secondary-green: #4a7c59;
+  --light-green: #f0f9f0;
+  
+  /* Neutral Colors */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8fafc;
+  --bg-tertiary: #f1f5f9;
+  --border-light: #e2e8f0;
+  --border-medium: #cbd5e1;
+  
+  /* Text Colors */
+  --text-primary: #1e293b;
+  --text-secondary: #64748b;
+  --text-white: #ffffff;
+  
+  /* Status Colors */
+  --success: #10b981;
+  --warning: #f59e0b;
+  --error: #ef4444;
+  --info: #3b82f6;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  
+  /* Spacing */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  
+  /* Border Radius */
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+}
+
+/* Main App Container */
+.App {
+  min-height: 100vh;
+  background: var(--bg-secondary);
+}
+
+/* Government Header Styles */
+.gov-header {
+  background: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
+  color: var(--text-white);
+  padding: var(--space-xl) var(--space-lg);
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  overflow: hidden;
+}
+
+.gov-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="%23ffffff" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>') repeat;
+  pointer-events: none;
+}
+
+.header-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+}
+
+.gov-logo {
+  width: 60px;
+  height: 60px;
+  background: var(--primary-gold);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--primary-green);
+  box-shadow: var(--shadow-md);
+}
+
+.header-text {
+  flex: 1;
+}
+
+.header-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.header-subtitle {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  margin-top: var(--space-xs);
+  font-weight: 400;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+}
+
+/* Navigation Styles */
+.nav-tabs {
+  background: var(--bg-secondary);
+  padding: var(--space-lg);
+  box-shadow: var(--shadow-sm);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.nav-tabs-container {
+  display: flex;
+  max-width: 1400px;
+  margin: 0 auto;
+  gap: var(--space-sm);
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: var(--space-sm);
+  background: var(--bg-primary);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+}
+
+.nav-tabs-container::-webkit-scrollbar {
+  display: none;
+}
+
+.nav-tab {
+  padding: var(--space-md) var(--space-lg);
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  position: relative;
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  min-height: 48px;
+  border: 2px solid transparent;
+}
+
+.nav-tab:hover {
+  color: var(--primary-green);
+  background: var(--light-green);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.nav-tab.active {
+  background: linear-gradient(135deg, var(--primary-green), var(--secondary-green));
+  color: var(--text-white);
+  font-weight: 600;
+  box-shadow: var(--shadow-md);
+  border: 2px solid var(--primary-gold);
+  transform: translateY(-2px);
+}
+
+.nav-tab.active:hover {
+  background: linear-gradient(135deg, var(--secondary-green), var(--primary-green));
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-lg);
+}
+
+.nav-tab-icon {
+  font-size: 1.1rem;
+  transition: transform 0.2s ease;
+}
+
+.nav-tab.active .nav-tab-icon {
+  transform: scale(1.1);
+}
+
+/* Content Area */
+.main-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: var(--space-xl) var(--space-lg);
+  min-height: calc(100vh - 200px);
+}
+
+/* Card Styles */
+.card {
+  background: var(--bg-primary);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-light);
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.card-header {
+  padding: var(--space-lg);
+  border-bottom: 1px solid var(--border-light);
+  background: var(--bg-tertiary);
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.card-body {
+  padding: var(--space-lg);
+}
+
+/* Button Styles */
+.btn {
+  padding: var(--space-sm) var(--space-md);
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: var(--primary-green);
+  color: var(--text-white);
+}
+
+.btn-primary:hover {
+  background: var(--secondary-green);
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-medium);
+}
+
+.btn-secondary:hover {
+  background: var(--border-light);
+}
+
+/* Loading State */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  color: var(--text-secondary);
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid var(--border-light);
+  border-top: 4px solid var(--primary-green);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: var(--space-md);
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes modalFadeIn {
+  0% {
+    opacity: 0;
+    backdrop-filter: blur(0px);
+    transform: translateZ(0);
+  }
+  100% {
+    opacity: 1;
+    backdrop-filter: blur(8px);
+    transform: translateZ(0);
+  }
+}
+
+@keyframes modalContentSlideIn {
+  0% {
+    transform: scale(0.95) translateY(-10px) translateZ(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1) translateY(0) translateZ(0);
+    opacity: 1;
+  }
+}
+
+/* Fix modal flickering issues */
+.modal-overlay {
+  will-change: opacity, backdrop-filter;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  contain: layout style paint;
+}
+
+.modal-content {
+  will-change: transform, opacity;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  contain: layout style paint;
+}
+
+/* Fix popup overflow issues */
+.mapboxgl-popup-content {
+  max-width: 350px !important;
+  max-height: 500px !important;
+  overflow: hidden !important;
+  border-radius: 12px !important;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2) !important;
+}
+
+.mapboxgl-popup-tip {
+  border-top-color: white !important;
+}
+
+/* Resource Optimizer card improvements */
+.resource-stats-card {
+  position: relative;
+  z-index: 1;
+  isolation: isolate;
+}
+
+/* Modal container fixes */
+.modal-container {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  z-index: 999999 !important;
+  pointer-events: auto !important;
+  isolation: isolate;
+}
+
+/* Prevent any container from interfering with modal */
+.card:has(.modal-container) {
+  z-index: auto;
+}
+
+.main-content:has(.modal-container) {
+  z-index: auto;
+}
+
+/* Fix any stacking context issues */
+body.modal-open {
+  position: fixed !important;
+  overflow: hidden !important;
+  width: 100% !important;
+}
+
+/* Ensure modal content is clickable */
+.modal-content-inner {
+  pointer-events: auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* Prevent any element from interfering with modal */
+.card {
+  z-index: auto;
+}
+
+.nav-tabs {
+  z-index: 100;
+}
+
+.gov-header {
+  z-index: 50;
+}
+
+/* Override any transform or contain properties that might interfere */
+* {
+  transform-style: flat;
+}
+
+/* Specific fixes for mapbox popup conflicts */
+.mapboxgl-popup {
+  z-index: 500 !important;
+}
+
+.mapboxgl-popup:has(.modal-container) {
+  z-index: auto !important;
+}
+
+/* Grid Layouts */
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: var(--space-lg);
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-lg);
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-lg);
+}
+
+/* Status Indicators */
+.status-badge {
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.status-reported { background: var(--info); color: white; }
+.status-in-progress { background: var(--warning); color: white; }
+.status-resolved { background: var(--success); color: white; }
+.status-closed { background: var(--text-secondary); color: white; }
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .header-title {
+    font-size: 2.2rem;
+  }
+  
+  .nav-tabs-container {
+    padding: var(--space-xs);
+  }
+  
+  .nav-tab {
+    padding: var(--space-sm) var(--space-md);
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    gap: var(--space-md);
+    text-align: center;
+  }
+  
+  .header-title {
+    font-size: 1.8rem;
+  }
+  
+  .header-subtitle {
+    font-size: 1rem;
+  }
+  
+  .nav-tabs {
+    padding: var(--space-sm);
+  }
+  
+  .nav-tabs-container {
+    gap: var(--space-xs);
+    padding: var(--space-xs);
+  }
+  
+  .nav-tab {
+    padding: var(--space-sm);
+    font-size: 0.85rem;
+    min-height: 44px;
+  }
+  
+  .nav-tab-icon {
+    font-size: 1rem;
+  }
+  
+  .main-content {
+    padding: var(--space-md);
+  }
+  
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+  
+  /* Overview section mobile adjustments */
+  .overview-mobile {
+    display: block !important;
+    height: auto !important;
+  }
+  
+  .overview-mobile .card {
+    height: auto !important;
+    margin-bottom: var(--space-lg);
+  }
+  
+  .overview-mobile .card:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-title {
+    font-size: 1.5rem;
+  }
+  
+  .nav-tab {
+    padding: var(--space-xs) var(--space-sm);
+    font-size: 0.8rem;
+  }
+  
+  .main-content {
+    padding: var(--space-sm);
+  }
+  
+  .card {
+    padding: var(--space-md);
+  }
+  
+  .card-header {
+    padding: var(--space-md);
+  }
+  
+  .card-body {
+    padding: var(--space-md);
+  }
+}
+
+/* Print Styles */
+@media print {
+  .nav-tabs,
+  .header-right {
+    display: none;
+  }
+  
+  .gov-header {
+    background: var(--primary-green) !important;
+    -webkit-print-color-adjust: exact;
+  }
+}

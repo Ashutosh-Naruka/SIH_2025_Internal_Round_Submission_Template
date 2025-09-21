@@ -1,0 +1,47 @@
+{
+  "expo": {
+    "name": "Jharkhand Civic Portal",
+    "slug": "jharkhand-civic-portal",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "description": "Official Government of Jharkhand Civic Issue Reporting System",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#FF6B35"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "This app needs access to camera to take photos of civic issues for reporting to the government.",
+        "NSPhotoLibraryUsageDescription": "This app needs access to photo library to select photos for civic issue reporting.",
+        "NSLocationWhenInUseUsageDescription": "This app needs access to location to tag civic issues with precise location data."
+      }
+    },
+    "android": {
+      "permissions": [
+        "CAMERA",
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION"
+      ],
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#FF6B35"
+      },
+      "package": "gov.jharkhand.civicportal",
+      "edgeToEdgeEnabled": true
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-localization",
+      "expo-camera",
+      "expo-image-picker",
+      "expo-location"
+    ]
+  }
+}
