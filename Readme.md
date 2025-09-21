@@ -19,7 +19,7 @@ This README provides an overview of the project, including team details, relevan
 
 ## Project Links
 
-- **SIH Presentation:** [Final SIH Presentation](https://docs.google.com/presentation/d/1BHBlrLus8pOETkPG_YXYlMSAVHAFfnx2/edit?usp=sharing&ouid=110687047687760089471&rtpof=true&sd=true)
+- **SIH Presentation:** [Final SIH Presentation]()
 - **Video Demonstration:** [Watch Video](https://youtu.be/SfNZNNAENhg)
 - **Live Deployment:** [View Deployment app](https://drive.google.com/file/d/1X5TELfcWHxT1lqo2Pc5CblEfL3-EAxPs/view?usp=sharing)
 - **Live Deployment:** [View Deployment dashboard](https://fixmycity-dashboard.netlify.app/)
