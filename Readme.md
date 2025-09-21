@@ -15,7 +15,7 @@ This README provides an overview of the project, including team details, relevan
 - **MEMBER_3** - 2024UCS1540 - [Bhumit Malhan](https://github.com/BhumitM)
 - **MEMBER_4** - 2024UCS1619 - [Anirudh Sreekumar Nair](https://github.com/Honest-Observer2)
 - **MEMBER_5** - 2025UIT3132 - [Eksha Yadav](https://github.com/ekshaydv)
-- **MEMBER_6** - 2024UCM2664 - [Kushi Jindal](https://github.com/UdayiniKhushi)
+- **MEMBER_6** - 2024UCM2664 - [Khushi Jindal](https://github.com/UdayiniKhushi)
 
 ## Project Links
 
